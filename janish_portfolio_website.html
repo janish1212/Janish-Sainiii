@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janish | Video Editor & Photo Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0B0F17',
+                            card: '#151C28',
+                            border: '#232D3F',
+                            accent: '#6366F1',
+                            purple: '#8B5CF6',
+                            cyan: '#06B6D4'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #A855F7 0%, #6366F1 50%, #06B6D4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.25);
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 35px 0px rgba(139, 92, 246, 0.4);
+        }
+        .bg-grid {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-200 font-sans antialiased overflow-x-hidden selection:bg-brand-accent selection:text-white bg-grid">
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-brand-dark/80 backdrop-blur-md border-b border-brand-border/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-wider gradient-text uppercase">Janish.</a>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-brand-cyan transition-colors">About</a>
+                <a href="#skills" class="hover:text-brand-cyan transition-colors">Skills</a>
+                <a href="#services" class="hover:text-brand-cyan transition-colors">What I Do</a>
+                <a href="#showcase" class="hover:text-brand-cyan transition-colors">Showcase</a>
+                <a href="#contact" class="hover:text-brand-cyan transition-colors">Contact</a>
+            </div>
+
+            <a href="#contact" class="hidden sm:inline-flex items-center px-4 py-2 text-xs font-semibold rounded-full bg-brand-accent/10 text-brand-accent border border-brand-accent/30 hover:bg-brand-accent hover:text-white transition-all">
+                Let's Talk
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-b border-brand-border px-4 py-4 space-y-3">
+            <a href="#about" class="block text-sm hover:text-brand-cyan">About</a>
+            <a href="#skills" class="block text-sm hover:text-brand-cyan">Skills</a>
+            <a href="#services" class="block text-sm hover:text-brand-cyan">What I Do</a>
+            <a href="#showcase" class="block text-sm hover:text-brand-cyan">Showcase</a>
+            <a href="#contact" class="block text-sm hover:text-brand-cyan">Contact</a>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center pt-24 pb-12 px-4 relative">
+        <!-- Background Ambient Lights -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-accent/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-10 w-72 h-72 bg-brand-purple/20 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto text-center z-10 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-card border border-brand-border text-xs font-medium text-brand-cyan">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Available for Freelance Projects
+            </div>
+
+            <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight">
+                Hi, I'm <span class="gradient-text">Janish</span>
+            </h1>
+
+            <p class="text-xl sm:text-2xl font-semibold text-slate-300">
+                Student <span class="text-brand-accent">|</span> Video Editor <span class="text-brand-accent">|</span> Photo Editor
+            </p>
+
+            <p class="text-slate-400 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
+                Transforming raw ideas into stunning visual experiences. Crafting high-engagement social media videos, eye-catching thumbnails, and crisp graphics.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+                <a href="#services" class="px-7 py-3.5 rounded-full bg-gradient-to-r from-brand-accent to-brand-purple text-white font-medium text-sm glow-effect hover:opacity-90 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-play text-xs"></i> View Work
+                </a>
+                <a href="#contact" class="px-7 py-3.5 rounded-full bg-brand-card border border-brand-border text-slate-200 font-medium text-sm hover:border-slate-500 transition-all flex items-center gap-2">
+                    <i class="fa-regular fa-paper-plane text-xs"></i> Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 px-4 max-w-5xl mx-auto">
+        <div class="bg-brand-card/80 border border-brand-border rounded-2xl p-8 md:p-12 relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-cyan/10 rounded-full blur-2xl"></div>
+            
+            <div class="max-w-3xl space-y-4">
+                <div class="text-xs uppercase font-bold tracking-widest text-brand-cyan">About Me</div>
+                <h2 class="text-3xl font-bold text-white">Turning Ideas Into Visual Reality</h2>
+                <p class="text-slate-300 leading-relaxed text-lg">
+                    Hello! I am <strong class="text-white">Janish</strong>, a passionate student and visual creator. I specialize in editing high-quality videos and photos, turning raw ideas into engaging visual content.
+                </p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+                    <div class="p-4 rounded-xl bg-brand-dark/60 border border-brand-border">
+                        <div class="text-2xl font-bold text-brand-accent mb-1">100%</div>
+                        <div class="text-xs text-slate-400">Creative Focus</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-brand-dark/60 border border-brand-border">
+                        <div class="text-2xl font-bold text-brand-purple mb-1">High</div>
+                        <div class="text-xs text-slate-400">Quality Render</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-brand-dark/60 border border-brand-border col-span-2 sm:col-span-1">
+                        <div class="text-2xl font-bold text-brand-cyan mb-1">Fast</div>
+                        <div class="text-xs text-slate-400">Turnaround Time</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 px-4 max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-xs uppercase font-bold tracking-widest text-brand-cyan mb-2">Expertise</h2>
+            <p class="text-3xl font-extrabold text-white">My Creative Skills</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Skill 1 -->
+            <div class="bg-brand-card p-6 rounded-2xl border border-brand-border hover:border-brand-accent/50 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-xl bg-brand-accent/10 border border-brand-accent/20 flex items-center justify-center text-brand-accent text-xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-film"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Video Editing</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Cutting, seamless transitions, professional color grading, and precise audio syncing.
+                </p>
+            </div>
+
+            <!-- Skill 2 -->
+            <div class="bg-brand-card p-6 rounded-2xl border border-brand-border hover:border-brand-purple/50 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-xl bg-brand-purple/10 border border-brand-purple/20 flex items-center justify-center text-brand-purple text-xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Photo Editing</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Detailed retouching, precise background removal, light adjustment, and color correction.
+                </p>
+            </div>
+
+            <!-- Skill 3 -->
+            <div class="bg-brand-card p-6 rounded-2xl border border-brand-border hover:border-brand-cyan/50 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-xl bg-brand-cyan/10 border border-brand-cyan/20 flex items-center justify-center text-brand-cyan text-xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-photo-film"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Content Creation</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Engaging YouTube Shorts, viral Instagram Reels, and catchy thumbnail designs.
+                </p>
+            </div>
+
+            <!-- Skill 4 -->
+            <div class="bg-brand-card p-6 rounded-2xl border border-brand-border hover:border-emerald-500/50 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Web Development</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Clean HTML5 structure, semantic elements, and modern responsive web layouts.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 px-4 max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-xs uppercase font-bold tracking-widest text-brand-cyan mb-2">Services</h2>
+            <p class="text-3xl font-extrabold text-white">What I Do Best</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-brand-card rounded-2xl p-8 border border-brand-border flex flex-col justify-between hover:bg-brand-card/90 transition-all">
+                <div>
+                    <div class="text-3xl text-brand-accent mb-4"><i class="fa-solid fa-video"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-3">Promotional & Social Videos</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Crafting high-impact promotional videos tailored for YouTube, Reels, and social media platforms to boost viewer engagement.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-brand-card rounded-2xl p-8 border border-brand-border flex flex-col justify-between hover:bg-brand-card/90 transition-all">
+                <div>
+                    <div class="text-3xl text-brand-purple mb-4"><i class="fa-solid fa-palette"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-3">Thumbnails & Banners</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Designing high-CTR YouTube thumbnails and channel banners that stand out in crowded feeds and attract clicks.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-brand-card rounded-2xl p-8 border border-brand-border flex flex-col justify-between hover:bg-brand-card/90 transition-all">
+                <div>
+                    <div class="text-3xl text-brand-cyan mb-4"><i class="fa-solid fa-image"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-3">Photo Enhancements</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Enhancing personal profile photos, gaming graphics, and social content with advanced lighting and retouching.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="showcase" class="py-20 px-4 max-w-6xl mx-auto">
+        <div class="bg-gradient-to-r from-brand-card via-brand-dark to-brand-card border border-brand-border rounded-3xl p-8 md:p-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold">
+                        <i class="fa-solid fa-gamepad"></i> Gaming Visuals Specialist
+                    </div>
+                    <h2 class="text-3xl font-extrabold text-white">Free Fire & Gaming Content Edits</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        I specialize in high-energy gaming highlights, Free Fire thumbnail creations, cinematic intros, and character vector manipulations.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-brand-accent"></i> Custom Gaming Character Editing & Cutouts
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-brand-accent"></i> Vibrant Glow Effects & Neon Text Styles
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-brand-accent"></i> Fast-Paced Montage Syncing
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Showcase Visual Card -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-accent to-brand-cyan rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
+                    <div class="relative bg-brand-dark border border-brand-border rounded-2xl overflow-hidden p-4">
+                        <div class="aspect-video rounded-xl overflow-hidden bg-slate-900 relative flex items-center justify-center">
+                            <!-- Image Fallback handling -->
+                            <img src="/mnt/data/143096.png" 
+                                 alt="Free Fire Character Visual" 
+                                 class="w-full h-full object-cover object-center transform group-hover:scale-105 transition duration-500"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/800x450/151C28/FFFFFF?text=Free+Fire+Gaming+Visual';" />
+                            <div class="absolute bottom-3 right-3 bg-brand-dark/90 px-3 py-1 rounded-md border border-brand-border text-xs font-mono text-brand-cyan">
+                                FF Visual Edit
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-4 max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-xs uppercase font-bold tracking-widest text-brand-cyan mb-2">Connect</h2>
+            <p class="text-3xl font-extrabold text-white">Get In Touch</p>
+            <p class="text-slate-400 text-sm mt-2">Have a project in mind or want to collaborate? Feel free to reach out!</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Email Card -->
+            <a href="mailto:workwithjanish@gmail.com" class="bg-brand-card p-6 rounded-2xl border border-brand-border hover:border-brand-accent transition-all flex items-center gap-4 group">
+                <div class="w-14 h-14 rounded-xl bg-brand-accent/10 border border-brand-accent/20 flex items-center justify-center text-brand-accent text-2xl group-hover:scale-110 transition-transform">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+                <div>
+                    <div class="text-xs text-slate-400 font-medium">Email Me</div>
+                    <div class="text-sm font-bold text-white group-hover:text-brand-accent transition-colors">workwithjanish@gmail.com</div>
+                </div>
+            </a>
+
+            <!-- Instagram Card -->
+            <a href="https://instagram.com/janishsxiniiii" target="_blank" rel="noopener noreferrer" class="bg-brand-card p-6 rounded-2xl border border-brand-border hover:border-pink-500/50 transition-all flex items-center gap-4 group">
+                <div class="w-14 h-14 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-500 text-2xl group-hover:scale-110 transition-transform">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div>
+                    <div class="text-xs text-slate-400 font-medium">Instagram DM</div>
+                    <div class="text-sm font-bold text-white group-hover:text-pink-400 transition-colors">@janishsxiniiii</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Quick Interactive Message Form -->
+        <div class="bg-brand-card p-8 rounded-2xl border border-brand-border">
+            <h3 class="text-lg font-bold text-white mb-6">Send a Quick Message</h3>
+            <form id="contact-form" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-1">Your Name</label>
+                        <input type="text" required placeholder="John Doe" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-brand-accent transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-1">Your Email</label>
+                        <input type="email" required placeholder="john@example.com" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-brand-accent transition-colors">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-slate-400 mb-1">Project Details</label>
+                    <textarea rows="4" required placeholder="Tell me about your video or photo editing needs..." class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-brand-accent transition-colors"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-accent to-brand-purple text-white font-semibold text-sm hover:opacity-90 transition-all shadow-lg">
+                    Send Message
+                </button>
+            </form>
+            <div id="form-response" class="hidden mt-4 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm text-center">
+                Thank you! Your message prompt was opened in your email client.
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-brand-border/60 py-8 text-center text-xs text-slate-500">
+        <p>© <span id="year"></span> Janish. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Set dynamic year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form submission helper
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const responseBox = document.getElementById('form-response');
+            responseBox.classList.remove('hidden');
+            this.reset();
+            setTimeout(() => {
+                responseBox.classList.add('hidden');
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
